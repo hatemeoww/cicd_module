@@ -28,13 +28,13 @@ def create_test_files():
         except FileNotFoundError:
             pass #ignore when no files
 
-@pytest.mark_parametrs(
+@pytest.mark.parametrize(
     "file_path, expected_words, expected_sentences",
     [
-        ("empty.txt", 0, 0)
-        ("one_word.txt", 1, 1)
-        ("no_punctuation.txt", 4, 1)
-        ("with_punctuation.txt", 6, 5)
+        ("empty.txt", 0, 0),
+        ("one_word.txt", 1, 1),
+        ("no_punctuation.txt", 4, 1),
+        ("with_punctuation.txt", 6, 5),
     ],
 )
 def test_count(file_path, expected_words, expected_sentences):
