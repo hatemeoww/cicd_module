@@ -26,8 +26,16 @@ def count(file_path: str) -> tuple[int, int]:
         print("File not found")
     except Exception as e:
         print("Error: ", e)
+
 def main():
-    print()
+    file_path = os.path.join("text.txt") #get file path
+
+    word_count, sentence_count = count(file_path) #count words and sentences
+    
+    if word_count is not None and sentence_count is not None: 
+        print("Number of words: ", word_count)
+        print("Number of sentences: ", sentence_count)
+
 
 if __name__ == "__main__":
     main()
