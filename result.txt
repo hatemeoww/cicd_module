@@ -1,0 +1,2 @@
+Number of words: 10
+Number of sentences: 2

@@ -33,9 +33,11 @@ def main():
     word_count, sentence_count = count(file_path) #count words and sentences
     
     if word_count is not None and sentence_count is not None: 
-        print("Number of words: ", word_count)
-        print("Number of sentences: ", sentence_count)
-
-
+        file = open('result.txt', 'w')
+        file.write(f"Number of words: {word_count}\nNumber of sentences: {sentence_count}")
+        file.close()
+    else:
+        print("File is empty!")
+        
 if __name__ == "__main__":
     main()
